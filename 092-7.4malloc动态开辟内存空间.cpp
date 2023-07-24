@@ -20,6 +20,7 @@ int main()
     int newlen = strlen("chenlichenwertygfdsdfghgfd")- 12 + 1;
     realloc(p, newlen);
     printf("扩容地址：%x\n", p);
+    //strcpy(p,"chenlichenwertygfdsdfghgfd");//一般编译器可以运行，但是vs2022不能运行，所以用strcpy_s(p,size,src);
     strcpy_s(p, strlen("chenlichenwertygfdsdfghgfd")+1, "chenlichenwertygfdsdfghgfd");//给'\0'留一个字节
     puts(p);
     putchar('\n');
